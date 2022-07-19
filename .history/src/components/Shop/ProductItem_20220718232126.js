@@ -5,17 +5,9 @@ import classes from "./ProductItem.module.css";
 
 const ProductItem = (props) => {
   const dispatch = useDispatch();
-  const { title, price, description, id } = props;
+  const { title, price, description } = props;
 
-  const addToCartHandler = () => {
-    dispatch(
-      cartActions.addItemToCart({
-        id: id,
-        title,
-        price,
-      })
-    );
-  };
+  const addToCartHandler = (props) => {};
 
   return (
     <li className={classes.item}>
@@ -26,7 +18,7 @@ const ProductItem = (props) => {
         </header>
         <p>{description}</p>
         <div className={classes.actions}>
-          <button onClick={addToCartHandler}>Add to Cart</button>
+          <button>Add to Cart</button>
         </div>
       </Card>
     </li>
