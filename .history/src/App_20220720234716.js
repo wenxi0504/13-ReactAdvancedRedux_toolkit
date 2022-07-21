@@ -15,9 +15,7 @@ function App() {
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.notification);
 
-  useEffect(() => {
-    dispatch(fetchCartData());
-  }, [dispatch]);
+  useEffect(() => {}, []);
 
   //put override the existing data
   useEffect(() => {

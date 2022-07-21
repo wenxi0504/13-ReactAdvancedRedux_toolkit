@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchCartData());
-  }, [dispatch]);
+  }, []);
 
   //put override the existing data
   useEffect(() => {

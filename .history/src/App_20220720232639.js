@@ -5,7 +5,7 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { uiActions } from "./store//ui-slice";
 import Notification from "./components/UI/Notification";
-import { sendCartData, fetchCartData } from "./store/cart-actions";
+import { sendCartData } from "./store/cart-slice";
 
 let isInitial = true;
 
@@ -14,10 +14,6 @@ function App() {
   const showCart = useSelector((state) => state.ui.cartIsVisible);
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.notification);
-
-  useEffect(() => {
-    dispatch(fetchCartData());
-  }, [dispatch]);
 
   //put override the existing data
   useEffect(() => {
