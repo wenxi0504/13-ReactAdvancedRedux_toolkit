@@ -40,8 +40,7 @@ const cartSlice = createSlice({
 });
 
 // 260 using an action creator thunk: thunk is a function that delays an action until later
-// sendCartData is an action creator
-export const sendCartData = (cart) => {
+const sendCartData = (cart) => {
   return async (dispatch) => {
     dispatch(
       uiActions.showNotification({

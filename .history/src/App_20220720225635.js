@@ -5,7 +5,6 @@ import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import { uiActions } from "./store//ui-slice";
 import Notification from "./components/UI/Notification";
-import { sendCartData } from "./store/cart-slice";
 
 let isInitial = true;
 
@@ -47,14 +46,14 @@ function App() {
       );
 
       // const responseData = await response.json();
-      // -----only keep this code--------
+
       if (isInitial) {
         isInitial = false;
         return;
       }
+
       //----------------------------------------------
     };
-    //------remove to cart slice
     sendCartData().catch((error) => {
       dispatch(
         uiActions.showNotification({
@@ -64,10 +63,6 @@ function App() {
         })
       );
     });
-    //---------------------------------
-    // add new code
-    dispatch(sendCartData(cart));
-    //----------------------------------
   }, [cart, dispatch]);
 
   return (

@@ -65,9 +65,6 @@ function App() {
       );
     });
     //---------------------------------
-    // add new code
-    dispatch(sendCartData(cart));
-    //----------------------------------
   }, [cart, dispatch]);
 
   return (

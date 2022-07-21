@@ -66,7 +66,7 @@ function App() {
     });
     //---------------------------------
     // add new code
-    dispatch(sendCartData(cart));
+    dispatch(sendCartData);
     //----------------------------------
   }, [cart, dispatch]);
 
